@@ -12,7 +12,5 @@ docker push sanchitverma/multi-worker:$SHA
 
 kubectl apply -f k8s 
 kubectl set image deployments/server-deployment server=sanchitverma/multi-server:$SHA
-kubectl set image deployments/client-deployment client=sanchitverma/multi-client
-:$SHA
-kubectl set image deployments/worker-deployment worker=sanchitverma/multi-worker
-:$SHA
+kubectl set image deployments/client-deployment client=sanchitverma/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=sanchitverma/multi-worker:$SHA
