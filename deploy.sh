@@ -1,6 +1,6 @@
-docker build -t sanchitverma/multi-client:latest -t sanchitverma/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t sanchitverma/multi-server:latest -t sanchitverma/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t sanchitverma/multi-worker:latest -t sanchitverma/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t sanchitverma/multi-client:latest -t sanchitverma/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t sanchitverma/multi-server:latest -t sanchitverma/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t sanchitverma/multi-worker:latest -t sanchitverma/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push sanchitverma/multi-client:latest
 docker push sanchitverma/multi-server:latest
